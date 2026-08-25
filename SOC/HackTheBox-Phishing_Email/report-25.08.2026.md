@@ -126,3 +126,7 @@ Submit the complete URL extracted from the email button to `VirusTotal` and revi
 </p>
 
 `Answer`: `Yes`
+
+<p align="center">
+  <img src="screenshots/complete.png" alt="complete" />
+</p>
