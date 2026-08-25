@@ -35,19 +35,30 @@
 
 </div>
 
+## Investigation Flow
+
+- [Sherlock Scenario](#sherlock-scenario)
+- [MITRE ATT&CK Mapping](#mitre-attck-mapping)
+- [Indicators of Compromise](#indicators-of-compromise)
+- [Return-Path Analysis](#return-path-analysis)
+- [URL and Domain Analysis](#url-and-domain-analysis)
+- [HTTP Response Body Hash](#http-response-body-hash)
+- [VirusTotal Analysis](#virustotal-analysis)
+- [Recommended Mitigations](#recommended-mitigations)
+
 ## Sherlock Scenario
 
-Your email address has been leaked and you receive an email from Paypal in German. Try to analyze the suspicious email.
+Your email address has been leaked and you receive an email from PayPal in German. Try to analyze the suspicious email.
 
 File location: `C:\Users\LetsDefend\Desktop\Files\PhishingChallenge.zip`
 Password: `infected`
 
 ## MITRE ATT&CK Mapping
 
-| ID | Tactic | Technique | Evidence |
-|---|---|---|---|
-| T1566.002 | Initial Access | Phishing: Spearphishing Link | The PayPal-themed phishing email contains an embedded link directing the recipient to externally hosted content. |
-| T1204.001 | Execution | User Execution: Malicious Link | The embedded button is designed to persuade the recipient to follow the malicious link. Actual user interaction was not confirmed. |
+| ID | Tactic | Technique | Status | Evidence |
+|---|---|---|---|---|
+| T1566.002 | Initial Access | Phishing: Spearphishing Link | Observed | The PayPal-themed phishing email contains an embedded link directing the recipient to externally hosted content. |
+| T1204.001 | Execution | User Execution: Malicious Link | Inferred | The embedded button was designed to persuade the recipient to follow the malicious link; however, no confirmed user interaction was observed. |
 
 ## Indicators of Compromise
 
@@ -58,15 +69,6 @@ Password: `infected`
 | URL | `hxxps://storage[.]googleapis[.]com/...` | URL extracted from the email button |
 | SHA-256 | `13945ecc33afee74ac7f72e1d5bb73050894356c4bf63d02a1a53e76830567f5` | SHA-256 of the HTTP response body |
 
-## Investigation Flow
-
-- [MITRE ATT CK Mapping](#mitre-att-ck-mapping)
-- [Indicators of Compromise](#indicators-of-compromise)
-- [Return-Path Analysis](#return-path-analysis)
-- [URL and Domain Analysis](#url-and-domain-analysis)
-- [HTTP Response Body Hash](#http-response-body-hash)
-- [VirusTotal Analysis](#virustotal-analysis)
-- [Recommended Mitigations](#recommended-mitigations)
 
 <h2 align="center"> 📝 Report </h2>
 
